@@ -1,25 +1,20 @@
-//import {constant_FEBuild}  from './contstants.js';
+import {bikeDetailsTemplate}  from './contstants.js';
 
 async function fetchBikes() {
   try {
-    let response = await fetch('./bikes_response.json');
+    let response = await fetch('../bikes_response.json');
     let data = await response.json();
     
     
 
     let allData = data;
 //code to generate the view
-data.forEach(bike => {
-let view = document.getElementById("view");
-let div = document.createElement("div");
-div.classList.add("bike-card");
-div.innerHTML = `
-                        <h2>${bike.Make} ${bike.Model}</h2>
-                        <p>Year: ${bike.Year}</p>
-                        <p>Displacement: ${bike.Displacement}cc</p>
-                        <p>Price: ${bike.Price}</p>
-                        <p>Terrain: ${bike.Terrain}</p>
-                        <p>Description: ${bike.Description}</p>`;
+    data.forEach(bike => {
+      let view = document.getElementById("view");
+      let div = document.createElement("div");
+        div.classList.add("bike-card");
+        div.innerHTML = bikeDetailsTemplate(bike)
+                    
                         view.appendChild(div);
 });
 
@@ -27,24 +22,20 @@ div.innerHTML = `
 
 // Add event listener for the search button
 document.getElementById("search-button").addEventListener("click", function(){
-let searchValue = document.getElementById("make-search").value;
-let matchingBikes = data.filter(bike => bike.Make.toLowerCase() === searchValue.toLowerCase());
+    let searchValue = document.getElementById("make-search").value;
+    let matchingBikes = data.filter(bike => bike.Make.toLowerCase() === searchValue.toLowerCase());
 // clear the current view
-view.innerHTML = "";
+    view.innerHTML = "";
 // generate the view for the matching bikes
 matchingBikes.forEach(bike => {
-let div = document.createElement("div");
-div.classList.add("bike-card");
-div.innerHTML = `
-                        <h2>${bike.Make} ${bike.Model}</h2>
-                        <p>Year: ${bike.Year}</p>
-                        <p>Displacement: ${bike.Displacement}cc</p>
-                        <p>Price: ${bike.Price}</p>
-                        <p>Terrain: ${bike.Terrain}</p>
-                        <p>Description: ${bike.Description}</p>`;
-view.appendChild(div);
+      let div = document.createElement("div");
+          div.classList.add("bike-card");
+          div.innerHTML = bikeDetailsTemplate(bike)
+          view.appendChild(div);
 });
 });
+
+
 // Add event listener for the clear button
 document.getElementById("clear-button").addEventListener("click", function(){
 // clear the current view
@@ -53,13 +44,7 @@ view.innerHTML = "";
 allData.forEach(bike => {
 let div = document.createElement("div");
 div.classList.add("bike-card");
-div.innerHTML = `
-                        <h2>${bike.Make} ${bike.Model}</h2>
-                        <p>Year: ${bike.Year}</p>
-                        <p>Displacement: ${bike.Displacement}cc</p>
-                        <p>Price: ${bike.Price}</p>
-                        <p>Terrain: ${bike.Terrain}</p>
-                        <p>Description: ${bike.Description}</p>`;
+div.innerHTML =  bikeDetailsTemplate(bike)
 view.appendChild(div);
 });
 });
@@ -93,13 +78,7 @@ function sortBikes(property) {
     allData.forEach(bike => {
       let div = document.createElement("div");
       div.classList.add("bike-card");
-      div.innerHTML = `
-                        <h2>${bike.Make} ${bike.Model}</h2>
-                        <p>Year: ${bike.Year}</p>
-                        <p>Displacement: ${bike.Displacement}cc</p>
-                        <p>Price: ${bike.Price}</p>
-                        <p>Terrain: ${bike.Terrain}</p>
-                        <p>Description: ${bike.Description}</p>`;
+      div.innerHTML =  bikeDetailsTemplate(bike)
       view.appendChild(div);
     });
   });
