@@ -1,4 +1,4 @@
-//import constant_FEBuild  from "View\controller\contstants.js";
+//import {constant_FEBuild}  from './contstants.js';
 
 async function fetchBikes() {
   try {
