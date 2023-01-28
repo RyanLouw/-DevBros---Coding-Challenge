@@ -99,4 +99,5 @@ function sortBikes(property) {
       view.appendChild(div);
     });
   });
-});
+}
+);
