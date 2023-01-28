@@ -1,75 +1,74 @@
 body {
-    font-family: Arial, sans-serif;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  #search-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-  }
-  
-  #make-search {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-  }
-  
-  #search-button, #clear-button {
-    float: left;
-    width: 100px;
-    height: 20px;
-    margin: 10px ;
-    
-    font-size: 12px;
-    font-weight: bold;
-    color: #555555;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    line-height: 20px;
-    background: -webkit-linear-gradient(top, #e3e3e3 0%, #d2d2d2 50%, #c6c6c6 51%, #adadad 100%);
-    background: linear-gradient(to bottom, #e3e3e3 0%, #d2d2d2 50%, #c6c6c6 51%, #adadad 100%);
-    border-radius: 6px;
-    box-shadow: 0 1px 3px 1px #666, 0 0 0 7px #ccc, 0 0 0 9px #fff, 0 0 0 11px #666;
-    text-shadow: 0 1px 0 #dedede;
+  font-family: Arial, sans-serif;
 }
-  
-  #view {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .bike-card {
-    background-color: #e3e3e3;
-    border-radius: 20px;
-    margin-top: 40px;
-    width: 300px;
-    margin-left: 10;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  #sort-select {
-    font-size: 16px;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 14px;
-    background-color: #f1f1f1;
-    text-align: center; /* added property to center the element */
-    width: 30%; /* added property to set width of the element */
-    
-    margin-bottom: 20px;/* added property to center the element horizontally and vertically */
-    position: absolute; /* added property to position the element */
-     /* added property to position the element */
-    left: 50%; /* added property to position the element */
-    transform: translate(-40%,-40%); 
-    
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#make-search {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#search-button,
+#clear-button {
+  float: left;
+  width: 100px;
+  height: 20px;
+  margin: 15px;
+  padding-right: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #555555;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 20px;
+  background: -webkit-linear-gradient(top, #e3e3e3 0%, #d2d2d2 50%, #c6c6c6 51%, #adadad 100%);
+  background: linear-gradient(to bottom, #e3e3e3 0%, #d2d2d2 50%, #c6c6c6 51%, #adadad 100%);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 1px #666, 0 0 0 7px #ccc, 0 0 0 9px #fff, 0 0 0 11px #666;
+  text-shadow: 0 1px 0 #dedede;
+}
+
+#view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bike-card {
+  background-color: #e3e3e3;
+  border-radius: 20px;
+  margin-top: 40px;
+  width: 300px;
+  margin-left: 10;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#sort-select {
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 14px;
+  background-color: #f1f1f1;
+  text-align: center;
+  width: 30%;
+  margin-bottom: 20px;
+  left: 50%;
+  transform: translate(-40%, -40%);
+
 }
