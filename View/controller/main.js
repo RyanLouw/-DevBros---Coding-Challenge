@@ -1,3 +1,5 @@
+//import constant_FEBuild  from "View\controller\contstants.js";
+
 fetch('./bikes_response.json')
 .then(response => response.json())
 .then(data => {
