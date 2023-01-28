@@ -10,7 +10,7 @@ body {
   #search-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
   
   #make-search {
@@ -38,6 +38,7 @@ body {
   }
   
   .bike-card {
+    margin-top: 20px;
     width: 300px;
     margin: 10px;
     padding: 20px;
@@ -48,13 +49,13 @@ body {
     font-size: 16px;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 14px;
     background-color: #f1f1f1;
     text-align: center; /* added property to center the element */
     width: 30%; /* added property to set width of the element */
-    margin: 5px auto; /* added property to center the element horizontally and vertically */
+    margin: 0px auto; /* added property to center the element horizontally and vertically */
     position: absolute; /* added property to position the element */
      /* added property to position the element */
     left: 50%; /* added property to position the element */
-    transform: translate(-50%,-50%); /* added property to position the element */
+    transform: translate(-40%,-40%); /* added property to position the element */
 }
