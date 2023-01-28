@@ -1,9 +1,13 @@
 //import constant_FEBuild  from "View\controller\contstants.js";
 
-fetch('./bikes_response.json')
-.then(response => response.json())
-.then(data => {
-let allData = data;
+async function fetchBikes() {
+  try {
+    let response = await fetch('./bikes_response.json');
+    let data = await response.json();
+    
+    
+
+    let allData = data;
 //code to generate the view
 data.forEach(bike => {
 let view = document.getElementById("view");
@@ -99,5 +103,14 @@ function sortBikes(property) {
       view.appendChild(div);
     });
   });
+
+  } catch (error) {
+    console.error(error);
+  }
 }
-);
+fetchBikes();
+
+
+
+
+
