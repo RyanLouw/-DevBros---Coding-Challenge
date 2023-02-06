@@ -1,27 +1,26 @@
-
 <head>
-    <title>Bike Inventory</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  
-  <body>
-    <h1>DevBros</h1>
-  
-    <div id="search-container">
-      <input type="text" id="make-search" placeholder="Search by make">
-      <button id="search-button">Search</button>
-      <button id="clear-button">Clear</button>
-    </div>
-  
-    <select id="sort-select">
-      <option value="def">Default</option>
-      <option value="Year">Year</option>
-      <option value="Displacement">Displacement</option>
-      <option value="Price">Price</option>
-      
-    </select>
-  
-    <div id="view"></div>
-  
-    <script src="../controller\main.js" type="module"></script>
-  </body>
+  <title>Bike Inventory</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>DevBros</h1>
+
+  <div id="search-container">
+    <input type="text" id="make-search" placeholder="Search">
+    <button id="search-button">Search</button>
+    <button id="clear-button">Clear</button>
+  </div>
+   <div id="sort-container">
+      <select id="sort-select">
+         <option value="def">Default</option>
+         <option value="Year">Year</option>
+        <option value="Displacement">Displacement</option>
+        <option value="Price">Price</option>
+      </select>
+   </div>
+
+  <div id="view"></div>
+
+  <script src="../controller\main.js" type="module"></script>
+</body>

@@ -18,13 +18,28 @@ async function fetchBikes() {
       view.appendChild(div);
     });
 
-
+   
 
     // Add event listener for the search button
     document.getElementById("search-button").addEventListener("click", function () {
-      let searchValue = document.getElementById("make-search").value.trim();
+      let searchValue = document.getElementById("make-search").value.trim().toLowerCase();
+     
       //searchValue.trim();  
-      let matchingBikes = data.filter(bike => bike.Make.toLowerCase() === searchValue.toLowerCase());
+      let matchingBikes = data.filter(bike => 
+        bike.Make.toLowerCase().includes(searchValue) ||
+        bike.Model.toLowerCase().includes(searchValue) ||
+        bike.Year.toString().includes(searchValue));
+
+      /*let matchingBikes = data.filter(bike => 
+        bike.Make.toLowerCase() === searchValue.toLowerCase() 
+        );*/
+        
+      /*let matchingBikes = data.filter(bike => 
+        bike.Model.toLowerCase() === searchValue.toLowerCase() ||
+        bike.Year.toLowerCase() === searchValue.toLowerCase()  ||
+        bike.Terrain.toLowerCase() === searchValue.toLowerCase());*/
+
+        
       // clear the current view
       view.innerHTML = "";
       // generate the view for the matching bikes
